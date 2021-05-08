@@ -19,3 +19,7 @@ function myFunc(){
         menu.classList.add('hidden')
     }
 }
+
+function buttonCourseOne() {
+    document.getElementById('video-section').innerHTML = 'First course';
+}
