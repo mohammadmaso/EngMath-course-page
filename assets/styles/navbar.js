@@ -1,0 +1,1 @@
+console.log("Href is :"+window.location.pathname)
