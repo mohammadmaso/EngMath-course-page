@@ -21,16 +21,13 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                <a id="home-nav" href="/" class="">Home</a>
 
-                <a href="/Courses/"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Courses</a>
+                <a id="courses-nav" href="/Courses/" class="">Courses</a>
 
-                <a href="/Visualization/"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Visualization</a>
+                <a id="visualization-nav" href="/Visualization/" class="">Visualization</a>
 
-                <a href="#about-us"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Abous
+                <a href="#about-us" class="">About
                   us</a>
               </div>
             </div>
@@ -46,8 +43,8 @@
 
               Menu open: "hidden", Menu closed: "block"
             -->
-              <svg id="menu-svg" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" aria-hidden="true">
+              <svg id="menu-svg" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               <!--
