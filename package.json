@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/mohammadmaso/EngMath-course-page/issues"
   },
-  "homepage": "https://github.com/mohammadmaso/EngMath-course-page#readme"
+  "homepage": "https://github.com/mohammadmaso/EngMath-course-page#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {
+    "kutty": "^0.5.1",
+    "prettier": "^2.3.0"
+  }
 }

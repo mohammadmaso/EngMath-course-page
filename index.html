@@ -1,217 +1,686 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="assets/styles/tailwind.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/styles/flickity.css" media="screen">
-  <script src="assets/styles/flickity.pkgd.min.js"></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <script src="Header.js" type="text/javascript" defer></script>
+    <script src="Footer.js" type="text/javascript" defer></script>
+    <script src="Spinner.js" type="text/javascript" defer></script>
+    <script src="CallToAction.js" type="text/javascript" defer></script>
+    <script type="text/javascript">!function(){function t(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,localStorage.getItem("rayToken")?t.src="https://app.raychat.io/scripts/js/"+o+"?rid="+localStorage.getItem("rayToken")+"&href="+window.location.href:t.src="https://app.raychat.io/scripts/js/"+o+"?href="+window.location.href;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}var e=document,a=window,o="c76a3825-8878-4b1b-bc79-6649a20f027e";"complete"==e.readyState?t():a.attachEvent?a.attachEvent("onload",t):a.addEventListener("load",t,!1)}();</script>
+    <title>PDE MathTools</title>
+  </head>
+  <body>
+    <div class="page min-h-screen">
 
-<body>
-  <div>
-    <nav class="bg-gray-800">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center h-16 justify-between">
-          <div class="flex items-center">
-            <div class="">
-              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+      <header-component></header-component>
+      <!--call to action -->
+      <call-to-action-component></call-to-action-component>
+      <!--statistic-->
+      <section class="px-4 py-4 mx-auto max-w-7xl">
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div class="flex-row items-center p-5 card">
+            <div
+              class="
+                flex
+                items-center
+                justify-center
+                w-20
+                h-20
+                text-pink-700
+                bg-pink-100
+                rounded
+              "
+            >
+              <ion-icon name="flask-outline" size="large"></ion-icon>
             </div>
-            <div class="hidden md:block">
-              <div class="ml-10 flex items-baseline space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a id="home-nav" href="/" class="">Home</a>
-
-                <a id="courses-nav" href="/Courses/" class="">Courses</a>
-
-                <a id="visualization-nav" href="/Visualization/" class="">Visualization</a>
-
-                <a href="#about-us"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
-                  us</a>
+            <div class="ml-3">
+              <h2
+                class="
+                  mb-1
+                  text-3xl
+                  font-extralight
+                  leading-none
+                  text-gray-900
+                  truncate
+                "
+              >
+                20
+              </h2>
+              <p class="text-sm leading-none text-gray-600">Visualization</p>
+            </div>
+          </div>
+          <div class="flex-row items-center p-5 card">
+            <div
+              class="
+                flex
+                items-center
+                justify-center
+                w-20
+                h-20
+                text-green-700
+                bg-green-100
+                rounded
+              "
+            >
+              <ion-icon name="videocam-outline" size="large"></ion-icon>
+            </div>
+            <div class="ml-3">
+              <h2
+                class="
+                  mb-1
+                  text-3xl
+                  font-extralight
+                  leading-none
+                  text-gray-900
+                  truncate
+                "
+              >
+                25
+              </h2>
+              <p class="text-sm leading-none text-gray-600">Training session</p>
+            </div>
+          </div>
+          <div class="flex-row items-center p-5 card">
+            <div
+              class="
+                flex
+                items-center
+                justify-center
+                w-20
+                h-20
+                text-red-700
+                bg-red-100
+                rounded
+              "
+            >
+              <ion-icon name="pencil-outline" size="large"></ion-icon>
+            </div>
+            <div class="ml-3">
+              <h2
+                class="
+                  mb-1
+                  text-3xl
+                  font-extralight
+                  leading-none
+                  text-gray-900
+                  truncate
+                "
+              >
+                24
+              </h2>
+              <p class="text-sm leading-none text-gray-600">Exercise series</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--help-->
+      <section class="px-4 pt-20 pb-24 mx-auto max-w-7xl">
+        <h1 class="mb-6 text-3xl font-bold md:text-3xl tracking-widest">
+          HELP
+        </h1>
+        <div
+          class="
+            text-sm
+            border-t border-b border-gray-200
+            divide-y divide-gray-200
+          "
+        >
+          <div x-data="collapse()">
+            <button
+              x-spread="trigger"
+              class="
+                flex
+                items-center
+                justify-between
+                w-full
+                py-4
+                pr-1
+                font-light
+                text-left text-gray-800
+                outline-none
+                hover:text-primary
+                focus:text-primary
+                focus:outline-none
+              "
+              role="button"
+              aria-controls="faq1"
+              aria-expanded="false"
+            >
+              How to run java visualization?
+              <svg
+                :class="{ 'rotate-45': open }"
+                class="flex-none w-4 h-4 ml-4 transition transform"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div
+              x-spread="collapse"
+              x-cloak
+              class="pb-5 pr-0 text-gray-700 md:pr-40"
+              id="faq1"
+            >
+              Browsers use the DOCTYPE declaration to choose whether to show the
+              document using a mode that is more compatible with Web standards
+              or with old browser bugs. Using a correct and modern DOCTYPE
+              declaration at the start of your HTML will improve browser
+              standards compliance.
+            </div>
+          </div>
+          <div x-data="collapse()">
+            <button
+              x-spread="trigger"
+              class="
+                flex
+                items-center
+                justify-between
+                w-full
+                py-4
+                pr-1
+                font-light
+                text-left text-gray-800
+                outline-none
+                hover:text-primary
+                focus:text-primary
+                focus:outline-none
+              "
+              role="button"
+              aria-controls="faq2"
+              aria-expanded="false"
+            >
+              How to write good lorem assume text?
+              <svg
+                :class="{ 'rotate-45': open }"
+                class="flex-none w-4 h-4 ml-4 transition transform"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div
+              x-spread="collapse"
+              x-cloak
+              class="pb-5 pr-0 text-gray-700 md:pr-40"
+              id="faq2"
+            >
+              HTML elements can have an id and/or class attribute. The id
+              attribute assigns a name to the element it is applied to, and for
+              valid markup, there can be only one element with that name. The
+              class attribute assigns a class name to the element, and that name
+              can be used on many elements within the page. CSS allows you to
+              apply styles to particular id and/or class names.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--our team-->
+      <section class="text-2xl font-light px-4 pt-4 pb-24 mx-auto max-w-7xl">
+        <div class="container mx-auto">
+          <div class="flex flex-col justify-end w-full mb-20">
+<!--            <h1 class="text-3xl font-bold mb-4 tracking-widest">ABOUT US</h1>-->
+<!--            <img src="assets/Images/K._N._Toosi_University_of_Technology.svg" class="h-20" alt="KNTU"/>-->
+<!--            <p class="text-sm font-serif font-light mb-4">K. N. Toosi University of Technology</p>-->
+            <h1 class="text-3xl font-bold mb-4 tracking-widest">OUR TEAM</h1>
+            <p class="lg:w-full leading-relaxed text-base">
+              Our mission is to help students to understand deeper the materials
+              we teach to them in "Advanced Engineering Mathematics" course.
+              Assignments are supplemented with these visualizations to help
+              students understand what kind of problems and phenomena they are
+              modeling and see how these modeling will be useful in real-world
+              applications.
+            </p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/2">
+              <div
+                class="
+                  h-full
+                  flex
+                  sm:flex-row
+                  flex-col
+                  items-center
+                  sm:justify-start
+                  justify-center
+                  text-center
+                  sm:text-left
+                "
+              >
+                <img
+                  alt="team"
+                  class="
+                    flex-shrink-0
+                    rounded-lg
+                    w-48
+                    h-48
+                    object-cover object-center
+                    sm:mb-0
+                    mb-4
+                  "
+                  src="assets/Images/aliakbarian.jpg"
+                />
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">
+                    Dr. Hadi Aliakbarian
+                  </h2>
+                  <h3 class="text-gray-500 mb-3">Supervisor</h3>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/2">
+              <div
+                class="
+                  h-full
+                  flex
+                  sm:flex-row
+                  flex-col
+                  items-center
+                  sm:justify-start
+                  justify-center
+                  text-center
+                  sm:text-left
+                "
+              >
+                <img
+                  alt="team"
+                  class="
+                    flex-shrink-0
+                    rounded-lg
+                    w-48
+                    h-48
+                    object-cover object-center
+                    sm:mb-0
+                    mb-4
+                  "
+                  src="assets/Images/mohammadmasoudie.jpg"
+                />
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">
+                    Mohammad Masoudie
+                  </h2>
+                  <h3 class="text-gray-500 mb-3">Lead Developer</h3>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/2">
+              <div
+                class="
+                  h-full
+                  flex
+                  sm:flex-row
+                  flex-col
+                  items-center
+                  sm:justify-start
+                  justify-center
+                  text-center
+                  sm:text-left
+                "
+              >
+                <img
+                  alt="team"
+                  class="
+                    flex-shrink-0
+                    rounded-lg
+                    w-48
+                    h-48
+                    object-cover object-center
+                    sm:mb-0
+                    mb-4
+                  "
+                  src="assets/Images/maryamKamali.jpg"
+                />
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">
+                    Maryam Kameli
+                  </h2>
+                  <h3 class="text-gray-500 mb-3">Content Manger</h3>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/2">
+              <div
+                class="
+                  h-full
+                  flex
+                  sm:flex-row
+                  flex-col
+                  items-center
+                  sm:justify-start
+                  justify-center
+                  text-center
+                  sm:text-left
+                "
+              >
+                <img
+                  alt="team"
+                  class="
+                    flex-shrink-0
+                    rounded-lg
+                    w-48
+                    h-48
+                    object-cover object-center
+                    sm:mb-0
+                    mb-4
+                  "
+                  src="assets/Images/samanGoudarzi.jpg"
+                />
+                <div class="flex-grow sm:pl-8">
+                  <h2 class="title-font font-medium text-lg text-gray-900">
+                    Saman Goudarzi
+                  </h2>
+                  <h3 class="text-gray-500 mb-3">Developer</h3>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="-mr-2 flex md:hidden" id="bars">
-            <!-- Mobile menu button -->
-            <button type="button"
-              class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-              aria-controls="mobile-menu" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <!--
-              Heroicon name: outline/menu
-
-              Menu open: "hidden", Menu closed: "block"
-            -->
-              <svg id="menu-svg" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <!--
-              Heroicon name: outline/x
-
-              Menu open: "block", Menu closed: "hidden"
-            -->
-              <svg id="x-svg" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+        </div>
+      </section>
+      <!--info-->
+      <section class="text-gray-600 body-font">
+        <div
+          class="
+            container
+            mx-auto
+            flex
+            px-5
+            py-24
+            md:flex-row
+            flex-col
+            items-end
+          "
+        >
+          <div class="lg:max-w-lg lg:w-full md:w-1/3 w-1/2 mb-10 md:mb-0">
+            <iframe
+              class="shadow-md rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.410103397519!2d51.44610191521325!3d35.740723634314435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e03f23ef71155%3A0x50c1ae57983a32eb!2sK.N.Toosi%20University%20of%20Technology%2C%20Faculty%20of%20Electrical%20Engineering!5e0!3m2!1sen!2sde!4v1622193923196!5m2!1sen!2sde"
+              width="550"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div
+            class="
+              lg:flex-grow
+              md:w-1/2
+              lg:pl-24
+              md:pl-16
+              flex flex-col
+              md:items-start
+              md:text-left
+              items-center
+              text-center
+            "
+          >
+            <div
+              class="
+                text-lg text-black
+                font-extralight
+                align-middle
+                mb-3
+                flex-row
+              "
+            >
+              <ion-icon
+                name="navigate-outline"
+                size="large"
+                class="mr-1"
+              ></ion-icon>
+              <div>
+                Faculty of Electrical Engineering K. N. Toosi University of
+                Technology PO Box 16315-1355 Tehran 1431714191, Iran.
+              </div>
+            </div>
+            <div
+              class="
+                text-lg text-black
+                font-extralight
+                align-middle
+                flex-row
+                mb-3
+              "
+            >
+              <ion-icon name="at-outline" size="large" class="mr-1"></ion-icon>
+              <div>h.aliakbarian@ieee.org / mohammadmasoudie@gmail.com</div>
+            </div>
+            <div
+              class="text-lg text-black font-extralight align-middle flex-row"
+            >
+              <ion-icon
+                name="call-outline"
+                size="large"
+                class="mr-1"
+              ></ion-icon>
+              <div>+982184062413</div>
+            </div>
           </div>
         </div>
+      </section>
+      <footer-component></footer-component>
+    </div>
+    <!--visualization video modal-->
+    <div id="modal-1" class="modal">
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe title="vimeo-player" src="https://player.vimeo.com/video/225109463" width="640" height="449" frameborder="0" allowfullscreen></iframe>
       </div>
+    </div>
+    <spinner-component></spinner-component>
 
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a id="home-nav-mob" href="/" class="">Home</a>
-
-          <a id="courses-nav-mob" href="/Courses/" class="">Courses</a>
-
-          <a id="visualization-nav-mob" href="/Visualization/" class="">Visualization</a>
-
-          <a href="#about-us"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About
-            us</a>
-        </div>
-      </div>
-  </div>
-  </nav>
-
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-gray-900 text-center">
-        Landing Sentence
-      </h1>
-      <div>
-        <p class="max-w-sm m-auto font-bold text-gray-400 text-center">dzfjhuaufhauspdihfuiasdhfuipasdhfuihahasd ahdf
-          uhdhfhasdhfudshfuh sdufh dhf ioas dfiosdhfio asdfh isadhf hsdaf sda f</p>
-      </div>
-    </div>
-  </header>
-  <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-    <div class="px-4 py-6 sm:px-0">
-      <div style="height: 30rem;" class="border-4 border-dashed border-gray-200 rounded-lg"></div>
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" id="courses">
-    <h1 class="text-3xl font-bold text-gray-900 text-center">
-      Course Titles
-    </h1>
-  </div>
-  <div class="carousel" data-flickity='{ "groupCells": 3 }'>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-    <a href="" class="carousel-cell-course"></a>
-  </div>
-  <div class="h-24"></div>
-  <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" id="visualizations">
-    <h1 class="text-3xl font-bold text-gray-900 text-center">
-      Visualizations
-    </h1>
-  </div>
-  <div class="carousel" data-flickity='{ "groupCells": 3 }'>
-    <a href="" class="carousel-cell-visualization"></a>
-    <a href="" class="carousel-cell-visualization"></a>
-    <a href="" class="carousel-cell-visualization"></a>
-    <a href="" class="carousel-cell-visualization"></a>
-    <a href="" class="carousel-cell-visualization"></a>
-    <a href="" class="carousel-cell-visualization"></a>
-  </div>
-  <div class="h-24"></div>
-  <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" id="about-us">
-    <h1 class="text-3xl font-bold text-gray-900 text-center">
-      Team
-    </h1>
-  </div>
-  <div class="h-10"></div>
-  <div class="md:flex md:justify-evenly hidden">
-    <div>
-      <div class="flex rounded-full h-60 w-60 bg-gray-300"></div>
-      <div class="text-center mt-3">
-        Kameli
-      </div>
-    </div>
-    <div>
-      <div class="rounded-full h-60 w-60 bg-gray-300"></div>
-      <div class="text-center mt-3">
-        Goudarzi
-      </div>
-    </div>
-    <div>
-      <div class="rounded-full h-60 w-60 bg-gray-300"></div>
-      <div class="text-center mt-3">
-        Masoudie
-      </div>
-    </div>
-  </div>
-  <div class="md:hidden flex flex-col items-center">
-    <div>
-      <div class="flex rounded-full h-40 w-40 bg-gray-300"></div>
-      <div class="text-center mt-3">
-        Kameli
-      </div>
-    </div>
-    <div>
-      <div class="rounded-full h-40 w-40 bg-gray-300"></div>
-      <div class="text-center mt-3">
-        Goudarzi
-      </div>
-    </div>
-    <div>
-      <div class="rounded-full h-40 w-40 bg-gray-300"></div>
-      <div class="text-center mt-3">
-        Masoudie
-      </div>
-    </div>
-  </div>
-  <div id="footer" class="bg-gray-50 flex mt-10 p-10 md:px-16 lg:px-24 lg:text-4xl md:text-2xl ">
-    <div class="mr-5 w-1/2">
-        <div class=""><i class="fa fa-home text-gray-500">
-                <p class="text-2xl">Faculty of Electrical Engineering</p>
-                <p class="text-2xl">K. N. Toosi University of Technology</p>
-                <p class="text-2xl">PO Box 16315-1355</p>
-                <p class="text-2xl">Tehran 1431714191, Iran</p>
-            </i>
-        </div>
-        <div class="mt-5"><i class="fa fa-envelope text-gray-500">
-                <p class="text-2xl">aliakbarian@eetd.kntu.ac.ir</p>
-            </i>
-        </div>
-        <div class="mt-5"><i class="fa fa-phone text-gray-500">
-                <p class="text-2xl">+982184062413</p>
-            </i>
-        </div>
-    </div>
-    <div class="w-full">
-        <iframe class="w-full h-full"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.6022160612748!2d51.44755032923197!3d35.740754098761286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e03f23ef71155%3A0x50c1ae57983a32eb!2sK.N.Toosi+University+of+Technology%2C+Faculty+of+Electrical+and+Computer+Engineering!5e0!3m2!1sen!2sus!4v1501236987118"
-            frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-</div>
-  <script src="assets/styles/myscript.js"></script>
-  <script src="assets/styles/navbar.js"></script>
-</body>
-
+  </body>
 </html>
