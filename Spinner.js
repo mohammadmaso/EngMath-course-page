@@ -139,7 +139,7 @@ class Spinner extends HTMLElement {
 
 customElements.define('spinner-component', Spinner);
 
-const wait = (delay = 0) =>
+const wait = (delay = 2000) =>
     new Promise(resolve => setTimeout(resolve, delay));
 
 const setVisible = (elementOrSelector, visible) =>
@@ -152,7 +152,7 @@ setVisible('.page', false);
 setVisible('#whirlpool', true);
 
 document.addEventListener('DOMContentLoaded', () =>
-    wait(   5000).then(() => {
+    wait(   2000).then(() => {
         setVisible('.page', true);
         setVisible('#whirlpool', false);
     }));
