@@ -152,7 +152,7 @@ setVisible('.page', false);
 setVisible('#whirlpool', true);
 
 document.addEventListener('DOMContentLoaded', () =>
-    wait(   2000).then(() => {
+    wait(   5000).then(() => {
         setVisible('.page', true);
         setVisible('#whirlpool', false);
     }));
