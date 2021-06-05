@@ -35,7 +35,9 @@ function create_list(item, index){
 }
 
 course_container.innerHTML = `
-
+        <div class="flex items-center justify-center flex-col pt-16">
+            <span class="tracking-widest text-lg uppercase text-gray-400 ">Select title from sidebar</span>
+        </div>
     `
 
 function handleCourseSelect(index){
