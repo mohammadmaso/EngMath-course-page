@@ -7,7 +7,7 @@ let courses = [
         homework_link: "Homework.com",
     },
     {
-        title: "Forirer transform",
+        title: "Fourier transform",
         length: "55",
         aparat_embed:'<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/s8ncb/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه چهارم تحلیل فوریه،دکتر علی اکبریان،دانشگاه خواجه نصیر(HD)" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         description: "This is test description ",
