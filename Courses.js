@@ -3,19 +3,11 @@ let courses = [
         title: "Introduction",
         length: "36",
         aparat_embed: '<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/w0Ir8/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه سوم تحلیل فوریه،دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
-<<<<<<< HEAD
         description: "This is test description",
         homework_link: "/homworkes/1.pdf",
     },
     {
-        title: "Fourier transform",
-        farsi_title: "",
-=======
-        description: "This is test description ",
-    },
-    {
         title: "Fourier Series",
->>>>>>> 989e2fdd7c0fb6eba11c7d0b6c71ecffa27c2dcd
         length: "55",
         aparat_embed:'<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/s8ncb/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه چهارم تحلیل فوریه،دکتر علی اکبریان،دانشگاه خواجه نصیر(HD)" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         description: "This is test description ",
