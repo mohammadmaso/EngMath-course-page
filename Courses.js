@@ -4,7 +4,6 @@ let courses = [
         length: "36",
         aparat_embed: '<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/w0Ir8/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه سوم تحلیل فوریه،دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         description: "This is test description",
-        homework_link: "/homworkes/1.pdf",
     },
     {
         title: "Fourier Series",
@@ -20,6 +19,7 @@ let courses = [
         aparat_embed: '<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/CM0PA/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه پنجم تحلیل فوریه،دکتر علی اکبریان،دانشگاه خواجه نصیر(HD)" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
          description: "This is test description ",
         homework_link: "/Homework/HW2.pdf",
+        homework_link2: "/Homework/HW3.pdf",
     },   
     {
         title: "Wave Equation in 1D",
@@ -28,14 +28,13 @@ let courses = [
         aparat_embed2:'<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/7q6vf/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه هشتم، معادله حرارت،دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         aparat_embed3:'<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/H1oya/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه نهم،حل معادله حرارت،دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         description: "This is test description ",
-        homework_link: "/Homework/HW3.pdf",
+        homework_link: "/Homework/HW4.pdf",
     },    
     {
         title: "Wave Equation in 2D",
         length: "36",
         aparat_embed: '<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/TXEix/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه دهم، معادله دوبعدی،دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         description: "This is test description ",
-        homework_link: "/Homework/HW4.pdf",
     },      
   {
         title: "Equations With Partial Derivatives in 2D",
@@ -94,7 +93,6 @@ let courses = [
         aparat_embed: '<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/KklXP/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه 25، دنباله ها و سری ها، دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         aparat_embed2:'<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/eynBm/vt/frame?&recom=none" title="ریاضیات مهندسی،جلسه 26، سری لوران و تکینی، دکتر علی اکبریان،دانشگاه خواجه نصیر" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>',
         description: "This is test description ",
-        homework_link: "/Homework/HW11.pdf",
     },           
    {
         title: "Residue methods & Real INtegrals",
