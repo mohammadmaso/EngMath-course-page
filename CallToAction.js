@@ -19,7 +19,7 @@ If you are curious how you could write such a fancy visualizations read this art
 
 The primary idea to develop such an online tool for students has been taken from MIT Mathlets page.</p>
             <button id="modal-1-btn" class="text-white shadow btn btn-white btn-lg  bg-blue-500 hover:bg-blue-600">Demo</ion-icon></button>
-            <a href="#" class="w-full text-blue-900 shadow btn btn-white btn-lg sm:w-auto" >Visializations</a>
+            <button id="modal-1-btn" class=" text-blue-900 shadow btn btn-white btn-lg sm:w-auto">Visualizations</ion-icon></button>
         </div>
         <div class="col-span-1 md:col-span-2">
             <img src="assets/Images/mac.png" class="w-full ml-0 select-none lg:ml-48" alt="Mac App"/>

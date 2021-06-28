@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
 
@@ -14,21 +15,29 @@
   <script src="Spinner.js" type="text/javascript" defer></script>
   <script src="CallToAction.js" type="text/javascript" defer></script>
   <script src="Courses.js" type="text/javascript" defer></script>
+  <!BEGIN RAYCHAT CODE-->
+    <script
+      type="text/javascript">!function () { function t() { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, localStorage.getItem("rayToken") ? t.src = "https://app.raychat.io/scripts/js/" + o + "?rid=" + localStorage.getItem("rayToken") + "&href=" + window.location.href : t.src = "https://app.raychat.io/scripts/js/" + o + "?href=" + window.location.href; var e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(t, e) } var e = document, a = window, o = "ff2d726e-5f1d-4ad9-8b8f-76976ff52483"; "complete" == e.readyState ? t() : a.attachEvent ? a.attachEvent("onload", t) : a.addEventListener("load", t, !1) }();</script>
+    <!END RAYCHAT CODE-->
 
-  <title>PDE MathTools | Courses</title>
+      <title>Engineering Mathematics | Courses</title>
 </head>
+
 <body>
-<div class="page min-h-screen">
-  <header-component></header-component>
+  <div class="page min-h-screen">
+    <header-component></header-component>
     <div class="pt-4 ">
-      <div class="md:flex flex-col md:flex-row md:min-h-screen w-full justify-self-center justify-items-center justify-center">
+      <div
+        class="md:flex flex-col md:flex-row md:min-h-screen w-full justify-self-center justify-items-center justify-center">
         <div @click.away="open = false"
           class="flex flex-col w-full md:w-1/5 text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0"
           x-data="{ open: false }">
           <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
             <a href="#"
-              class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Course list</a>
-            <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+              class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Course
+              list</a>
+            <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+              @click="open = !open">
               <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                 <path x-show="!open" fill-rule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
@@ -39,18 +48,21 @@
               </svg>
             </button>
           </div>
-          <nav id="menu_container" :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
+          <nav id="menu_container" :class="{'block': open, 'hidden': !open}"
+            class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
             <!-- course list  -->
           </nav>
         </div>
-        <div id="course_container" class="px-8 shadow-md border  rounded-md pt-4 flex flex-col md:w-3/5 text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0">
-          
+        <div id="course_container"
+          class="px-8 shadow-md border  rounded-md pt-4 flex flex-col md:w-3/5 text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0">
+
 
         </div>
       </div>
+    </div>
+    <footer-component></footer-component>
   </div>
-  <footer-component></footer-component>
-</div>
-<spinner-component></spinner-component>
+  <spinner-component></spinner-component>
 </body>
+
 </html>

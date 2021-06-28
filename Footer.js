@@ -1,13 +1,13 @@
 
 class Footer extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <footer class="flex flex-col items-center justify-between px-4 py-12 mx-auto max-w-7xl md:flex-row z-20">
-  <p class="mb-8 text-sm text-center text-gray-700 md:text-left md:mb-0">© Copyright 2021 PDE MathTools. All Rights Reserved.</p>
+  <p class="mb-8 text-sm text-center text-gray-700 md:text-left md:mb-0">© Copyright 2021 Engineering Mathematics Open Course. All Rights Reserved.</p>
   <div class="flex items-center space-x-6">
     <a href="#">
       <span class="sr-only">Twitter</span>
@@ -76,7 +76,7 @@ class Footer extends HTMLElement {
 
 
     `;
-    }
+  }
 }
 
 customElements.define('footer-component', Footer);
