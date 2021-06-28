@@ -71,7 +71,7 @@ class Header extends HTMLElement {
       </div>
       <div class="relative">
         <button  class="flex items-center rounded-full btn btn-sm btn-white">
-        <a href="/course.html">
+        <a href="course.html">
         <ion-icon name="book-outline" class="mr-1"></ion-icon>
              Courses
              </a>
