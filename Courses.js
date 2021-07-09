@@ -121,7 +121,7 @@ function create_list(item, index) {
                         <ion-icon class="mr-1" name="time-outline"></ion-icon>
                         <p>${item.length} min</p>
                     </div>
-                    <span class="text-xs font-medium bg-green-100 py-2 px-2 rounded text-green-500 align-middle">Persian</span>
+                    <span class="text-xs font-medium bg-green-100 py-1 px-2 rounded text-green-500 align-middle">Persian</span>
               </div>
             </div> 
     `
