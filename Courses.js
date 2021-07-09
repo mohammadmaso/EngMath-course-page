@@ -115,6 +115,7 @@ function create_list(item, index) {
                     <a onclick="handleCourseSelect(${index})" href="#">${item.title}</a>
                 </div>
               <div class="flex place-items-center place-self-end text-sm">
+              <span class="text-sm font-medium bg-green-100 py-1 px-2 rounded text-green-500 align-middle">Persian</span>
                 <ion-icon class="mr-1" name="time-outline"></ion-icon>
                 <p>${item.length} min</p>
               </div>
