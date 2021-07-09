@@ -110,12 +110,13 @@ courses.forEach(create_list)
 function create_list(item, index) {
     menu_container.innerHTML += `
             <div class="grid justify-items-stretch grid-cols-2 px-4 py-2 mt-2  text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"> 
-                <div class="flex place-items-center font-semibold">
+                <div class="flex flex-col place-items-center font-semibold">
                     
                     <a onclick="handleCourseSelect(${index})" href="#">${item.title}</a>
+                     <span class="text-xs font-medium bg-green-100 py-1 px-2 rounded text-green-500 align-middle">Persian</span>
                 </div>
               <div class="flex place-items-center place-self-end text-sm">
-              <span class="text-sm font-medium bg-green-100 py-1 px-2 rounded text-green-500 align-middle">Persian</span>
+               
                 <ion-icon class="mr-1" name="time-outline"></ion-icon>
                 <p>${item.length} min</p>
               </div>
